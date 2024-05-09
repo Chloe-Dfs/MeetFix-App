@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color> <!-- Couleur de texte -->
+    <color name="black">#000814</color> <!-- Couleur de fond -->
+    <color name="purple">#8C5FBF</color> <!-- Couleur primaire -->
+    <color name="ghostPurple">#808C5FBF</color>
+    <color name="green">#18F281</color> <!-- Couleur secondaire-->
+    <color name="ghostGreen">#8018F281</color>
+    <color name="coral">#F67979</color> <!-- Couleur d'accent -->
+    <color name="ghostCoral">#80F67979</color>
+</resources>
