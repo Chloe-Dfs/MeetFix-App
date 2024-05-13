@@ -2,13 +2,44 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
-             android:layout_height="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:background="@color/coral"
              tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Menu principal"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Activités à proximité"/>
+        <!-- Carrousel horizontal pour les activités -->
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_activities"
+                android:layout_width="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+
+                android:layout_height="70dp"
+
+                android:layout_marginBottom="16dp"/>
+
+        <!-- Texte "Membres proximité" -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Membres proximité"
+                android:textSize="24sp"
+                android:layout_marginBottom="16dp"/>
+
+        <!-- Carrousel horizontal pour les membres -->
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_members"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
 
 </FrameLayout>
