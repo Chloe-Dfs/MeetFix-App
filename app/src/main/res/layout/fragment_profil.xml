@@ -7,56 +7,46 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:padding="20dp">
+            android:layout_height="match_parent" android:layout_margin="10dp" android:padding="10dp"
+            android:dividerPadding="100dp" android:showDividers="middle|beginning|end">
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:paddingTop="50dp">
+                android:layout_height="wrap_content">
             <ImageView
                     android:layout_width="100dp"
                     android:layout_height="match_parent" android:id="@+id/profile_pic" android:layout_weight="1"
-                    app:srcCompat="@drawable/happy_kirby" android:layout_margin="10dp"/>
+                    app:srcCompat="@drawable/happy_kirby"/>
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:layout_weight="2">
-                <TextView
-                        android:text="Nom"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/textNom" android:layout_weight="2"/>
                 <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:hint="Deniau" android:layout_weight="1"
-                        android:id="@+id/inputNom">
+                        android:layout_height="match_parent" android:hint="Nom" android:layout_weight="1"
+                        android:id="@+id/inputNom" android:layout_marginTop="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                    />
+                            android:text="Deniau"/>
                 </com.google.android.material.textfield.TextInputLayout>
-                <TextView
-                        android:text="Prénom"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/testPrenom"/>
                 <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:hint="Ewen" android:id="@+id/inputPrenom">
+                        android:layout_height="match_parent" android:hint="Prénom" android:id="@+id/inputPrenom"
+                        android:layout_marginTop="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                    />
+                            android:text="Ewen"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
-        <TextView
-                android:text="Bio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textBio"/>
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/inputBio"
-        >
+                android:hint="Bio" android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -64,18 +54,15 @@
                     android:hint="Étudiant en L3 MIS à l'UBS, je souhaite apprendre à réparer différents objets et outils afin de gagner en indépendance et de réduire les coûts de réparation."
                     android:singleLine="false"/>
         </com.google.android.material.textfield.TextInputLayout>
-        <TextView
-                android:text="Ville"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textVille"/>
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:id="@+id/inputVille" android:hint="Vannes">
+                android:layout_height="wrap_content" android:id="@+id/inputVille" android:hint="Ville"
+                android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-            />
+                    android:text="Vannes"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 </FrameLayout>
