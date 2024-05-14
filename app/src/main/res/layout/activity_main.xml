@@ -17,11 +17,11 @@
                 android:padding="5dp"
                 android:orientation="horizontal"
             <Button
-                    android:id="@+id/nav_home"
+                    android:id="@+id/nav_rechercher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/round"
-                    android:text="home"/>
+                    android:text="rechercher"/>
             </LinearLayout>
             <!--Cellule 2-->
             <View

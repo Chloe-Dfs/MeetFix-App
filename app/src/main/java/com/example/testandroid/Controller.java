@@ -9,13 +9,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class Controller {
 
     private MainActivity activity;
-    private Modele modele;
+
 
 
 
     public Controller(MainActivity activity){
         this.activity = activity;
-        this.modele = new Modele();
     }
 
     //Méthode pour changer le fragment en fonction du bouton choisi sur la barre de navigation en bas
@@ -52,14 +51,14 @@ public class Controller {
     }
 
     public void ecouteursBtns() {
-        Button homeBtn = activity.findViewById(R.id.nav_home);
+        Button findBtn = activity.findViewById(R.id.nav_rechercher);
         Button notifBtn = activity.findViewById(R.id.nav_notification);
         Button parametresBtn = activity.findViewById(R.id.nav_parametres);
 
-        homeBtn.setOnClickListener(new View.OnClickListener() {
+        findBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity.moveToFragment(new HomeFragment());
+                activity.moveToFragment(new RechercherFragment());
             }
         });
 

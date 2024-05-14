@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/nav_rechercher"
-          android:icon="@drawable/round"/>
+    <item android:id="@+id/nav_home"
+          android:icon="@drawable/imgnull"/>
     <item android:id="@+id/nav_favoris"
           android:icon="@drawable/round"/>
     <item android:id="@+id/nav_ajouter"

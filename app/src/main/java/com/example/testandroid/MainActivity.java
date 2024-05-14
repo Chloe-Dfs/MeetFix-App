@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.squareup.picasso.Picasso;
 import org.jetbrains.annotations.NotNull;
 
 //classe Vue
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         moveToFragment(new HomeFragment());
         controller.changeView();
         controller.ecouteursBtns();
+        Picasso.setSingletonInstance(new Picasso.Builder(this).build());
     }
 
     //Méthode pour changer d'écran (de Fragment)

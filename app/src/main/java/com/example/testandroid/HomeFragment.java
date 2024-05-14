@@ -9,21 +9,23 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private RecyclerView recyclerView;
-    private ActivityAdapter adapter;
-    private List<Activite> activites;
+    private RecyclerView recyclerViewAct;
+    private RecyclerView recyclerViewMembres;
+    private ActivityAdapter adapterAct;
+    private MembresAdapter adapterMem;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         // Initialiser RecyclerView
-        recyclerView = view.findViewById(R.id.recycler_activities);
+        recyclerViewAct = view.findViewById(R.id.recycler_activities);
+        recyclerViewMembres = view.findViewById(R.id.recycler_membres);
 
 
         // Initialiser Modele
@@ -31,15 +33,19 @@ public class HomeFragment extends Fragment {
 
         // Obtenir Liste act du Modele
         List<Activite> activites = modele.getActivites();
+        List<Membres> member = modele.getMembres();
 
         // Initialiser Adapter
-        adapter = new ActivityAdapter(activites);
+        adapterAct = new ActivityAdapter(activites);
+        adapterMem = new MembresAdapter(getContext(),member);
 
         // Set l'adapter
-        recyclerView.setAdapter(adapter);
+        recyclerViewAct.setAdapter(adapterAct);
+        recyclerViewMembres.setAdapter(adapterMem);
 
         // Set le layoutManager
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerViewAct.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerViewMembres.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
 
         return view;
