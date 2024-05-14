@@ -3,16 +3,15 @@ package com.example.testandroid;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import androidx.constraintlayout.utils.widget.MotionLabel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 //classe controleur
 public class Controller {
 
     private MainActivity activity;
-
-
-
-
     public Controller(MainActivity activity){
         this.activity = activity;
     }
@@ -50,10 +49,16 @@ public class Controller {
         });
     }
 
+
+
+
     public void ecouteursBtns() {
         Button findBtn = activity.findViewById(R.id.nav_rechercher);
         Button notifBtn = activity.findViewById(R.id.nav_notification);
         Button parametresBtn = activity.findViewById(R.id.nav_parametres);
+
+
+
 
         findBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,4 +81,9 @@ public class Controller {
             }
         });
     }
+
+
+
+
+
 }

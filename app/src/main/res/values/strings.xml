@@ -2,4 +2,6 @@
     <string name="app_name">testAndroid</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="carte_btn">Carte</string>
+    <string name="liste_btn">Liste</string>
 </resources>

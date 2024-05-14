@@ -5,9 +5,30 @@
              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
              android:background="@color/coral"
              tools:context=".HomeFragment">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+    <Button
+            android:text="Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCarteListe"/>
+
+        <ImageView
+                android:id="@+id/imgCarte"
+                android:layout_width="match_parent"
+                android:src="@drawable/karpatest"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+        </ImageView>
 
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content" android:orientation="vertical">
+                  android:layout_height="wrap_content"
+                  android:id="@+id/layoutHomeCar"
+                  android:visibility="visible"
+                  android:orientation="vertical">
+
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -46,6 +67,6 @@
 
     </LinearLayout>
 
-
+    </LinearLayout>
 
 </FrameLayout>
