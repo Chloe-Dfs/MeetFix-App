@@ -21,14 +21,22 @@ public class HomeFragment extends Fragment {
     private ActivityAdapter adapterAct;
     private MembresAdapter adapterMem;
 
-    private Button btnCarteListe;
     private ImageView imgCarte;
     private LinearLayout linLayListe;
-
+    private HomeController homeController;
+    private Button btnCarteListe;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //initialiser bouton Carte/liste
+        btnCarteListe = view.findViewById(R.id.btnCarteListe);
+        homeController = new HomeController(this);
+        homeController.initBtnCarteListe(btnCarteListe);
+        homeController.btnCarteListeListener();
+
+
 
 
         // Initialiser RecyclerView
@@ -40,7 +48,7 @@ public class HomeFragment extends Fragment {
         // Initialiser Modele
         Modele modele = new Modele();
 
-        // Obtenir Liste act du Modele
+        // Obtenir Liste des activités et membres à proximité du Modele
         List<Activite> activites = modele.getActivites();
         List<Membres> member = modele.getMembres();
 
@@ -56,19 +64,15 @@ public class HomeFragment extends Fragment {
         recyclerViewAct.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerViewMembres.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
-        //Btns
-        btnCarteListe = view.findViewById(R.id.btnCarteListe);
-
         //Initialiser changement vue
         imgCarte = view.findViewById(R.id.imgCarte);
+        imgCarte.setVisibility(View.GONE);
         linLayListe = view.findViewById(R.id.layoutHomeCar);
+        linLayListe.setVisibility(View.VISIBLE);
+
+
 
         return view;
-    }
-
-
-    public View getBtnCarteListe() {
-        return btnCarteListe;
     }
 
     public void showCarte() {
@@ -81,5 +85,13 @@ public class HomeFragment extends Fragment {
         linLayListe.setVisibility(View.VISIBLE);
         imgCarte.setVisibility(View.GONE);
         btnCarteListe.setText(R.string.carte_btn);
+
     }
+
+
+
+
+
+
+
 }

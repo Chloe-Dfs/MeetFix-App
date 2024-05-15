@@ -1,37 +1,41 @@
 package com.example.testandroid;
 
 import android.view.View;
+import android.widget.Button;
 
 
 public class HomeController {
 
-    private HomeFragment view;
-    private boolean isListDisplayed = true;
+    private HomeFragment homefragment;
+    private Boolean isListDisplayed;
+    private Button btnCartel;
 
-    public HomeController(HomeFragment view) {
-        this.view = view;
-        initListeners();
+
+    public HomeController(HomeFragment homefragment) {
+        this.homefragment = homefragment;
+
     }
 
-    private void initListeners() {
-        // Ajoutez ici les écouteurs d'événements, comme le clic sur le bouton
-        view.getBtnCarteListe().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                changeTxtBtn(); // Appel à une méthode pour basculer entre la liste et la carte
-            }
-        });
+    public void initBtnCarteListe(Button btnCarteListe) {
+
+        this.btnCartel = btnCarteListe;
+        isListDisplayed = true;
     }
 
-    // changer txt et utilité btn carte/liste
-    public void changeTxtBtn() {
 
-        if (isListDisplayed) {
-            view.showCarte(); // Méthode dans HomeFragment pour afficher la carte
-            isListDisplayed = false;
-        } else {
-            view.showListe(); // Méthode dans HomeFragment pour afficher la liste
-            isListDisplayed = true;
+    public void btnCarteListeListener() {
+        if (btnCartel != null){
+            btnCartel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (isListDisplayed){
+                        homefragment.showCarte();
+                    } else {
+                        homefragment.showListe();
+                    }
+                    isListDisplayed = !isListDisplayed;
+                }
+            }) ;
         }
 
 
