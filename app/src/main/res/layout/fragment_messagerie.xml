@@ -7,34 +7,109 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:text="TextView"
+            android:layout_height="match_parent">
+        <!--information photo nom etc-->
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView3"/>
-        <TextView
-                android:text="TextView"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+        </LinearLayout>
+        <!--espace msg-->
+        <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView"/>
-        <TextView
-                android:text="TextView"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:background="@color/ghostCoral">
+            <!--msg 1-->
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/ghostCoral">
+                <TextView
+                    android:text=""
+                    android:id="@+id/msg_ex"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round"/>
+                <View
+                        android:text="@string/msg_txt"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background=""/>
+            </LinearLayout>
+            <!--msg 2-->
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/ghostCoral">
+
+                <View
+                        android:text="@string/msg_txt"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent"
+                        android:background=""/>
+                <TextView
+                        android:text="@string/msg_txt"
+                        android:id="@+id/msg_exr"
+                        android:layout_width="0dp"
+                        android:layout_weight="6"
+                        android:layout_height="match_parent"
+                        style="@style/SendedMessage"/>
+            </LinearLayout>
+            <!--msg 3-->
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:background="@color/ghostCoral">
+                <TextView
+                        android:text=""
+                        android:id="@+id/msg_ex"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round"/>
+                <View
+                        android:text="@string/msg_txt"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="match_parent"
+                        android:background=""/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--bottom-->
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView2"/>
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/purpleBordeaux">
+
+            <EditText
+                    android:layout_width="316dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    android:ems="10"
+                    android:id="@+id/editTextTextMultiLine"/>
+            <Button
+                    android:text="Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/button2"/>
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="363dp">
-        <EditText
-                android:layout_width="316dp"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:gravity="start|top"
-                android:ems="10"
-                android:id="@+id/editTextTextMultiLine"/>
-        <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button2"/>
-    </LinearLayout>
+
 </FrameLayout>
