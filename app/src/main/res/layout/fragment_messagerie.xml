@@ -31,13 +31,12 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="@color/ghostCoral">
-                <TextView
-                    android:text=""
 
-                    android:layout_width="0dp"
-                    android:layout_weight="6"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/round"/>
+                <TextView
+                        android:text="FEUR"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round"/>
                 <View
                         android:text="@string/msg_txt"
                         android:layout_width="0dp"
