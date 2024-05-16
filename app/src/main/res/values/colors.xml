@@ -7,12 +7,14 @@
     <color name="ghostPurple">#808C5FBF</color>
     <color name="green">#18F281</color> <!-- Couleur secondaire-->
     <color name="ghostGreen">#8018F281</color>
-    <color name="ghostGreenBis">#807AFFBA</color>
+    <color name="ghostGreenBis">#857BF7B6</color>
     <color name="coral">#F67979</color> <!-- Couleur d'accent -->
     <color name="ghostCoral">#80F67979</color>
+    <color name="ghostCoralBis">#80FFB6B6</color>
 
     <!--Style 2 (Chloé)-->
     <color name="purpleBordeaux">#781131</color>
+    <color name="purpleBordeauxBis">#650819</color>
     <color name="bordeaux">#6D071A</color>
 
     <color name="vert_terre">#557311</color>

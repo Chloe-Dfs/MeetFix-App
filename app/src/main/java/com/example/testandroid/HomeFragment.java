@@ -5,6 +5,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +23,7 @@ public class HomeFragment extends Fragment {
     private MembresAdapter adapterMem;
 
     private ImageView imgCarte;
-    private LinearLayout linLayListe;
+    private ConstraintLayout linLayListe;
     private HomeController homeController;
     private Button btnCarteListe;
 
@@ -61,8 +62,10 @@ public class HomeFragment extends Fragment {
         recyclerViewMembres.setAdapter(adapterMem);
 
         // Set le layoutManager
-        recyclerViewAct.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-        recyclerViewMembres.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        //recyclerViewAct.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+       //recyclerViewMembres.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+
+
 
         //Initialiser changement vue
         imgCarte = view.findViewById(R.id.imgCarte);

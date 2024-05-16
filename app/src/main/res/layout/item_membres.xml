@@ -1,111 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:orientation="horizontal"
-              android:layout_height="match_parent"
-              xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    <!-- Nom de l'activité -->
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
 
-    <!-- Emplacement de l'activité -->
-    <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="25dp"
+        style="@style/Membre_img"
+        app:cardElevation="0dp"
+        android:animateLayoutChanges="true"
+>
 
-            style="@style/Membre_img">
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="229dp"
+            android:layout_height="318dp">
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_weight="4"
-                android:orientation="horizontal"
-                android:layout_height="0dp">
-            <View
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"/>
-            <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:id="@+id/idMembre"
-                    android:src="@drawable/karpatest"
-                    android:layout_height="match_parent">
 
-            </ImageView>
-            <View
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"/>
-        </LinearLayout>
+        <ImageView
+
+                android:id="@+id/idMembre"
+                android:src="@drawable/karpatest"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerInside"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintBottom_toTopOf="@+id/text_name"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+        >
+        </ImageView>
 
 
         <TextView
-                android:layout_width="match_parent"
-                android:layout_weight="1"
                 android:id="@+id/text_name"
                 android:text="@string/nom_txt"
-                android:layout_height="0dp">
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/purpleBordeauxBis"
+                app:layout_constraintTop_toBottomOf="@+id/idMembre"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/text_location"
+                android:textSize="24sp"
+                android:textStyle="bold">
         </TextView>
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_height="0dp">
-            <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:id="@+id/text_location"
-                    android:text="@string/location_txt"
-                    android:layout_height="match_parent">
-            </TextView>
-            <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:id="@+id/text_age"
-                    android:text="@string/age_txt"
-                    android:layout_height="match_parent">
-            </TextView>
-        </LinearLayout>
+
 
         <TextView
-                android:layout_width="match_parent"
-                android:layout_weight="2"
+
+                android:id="@+id/text_location"
+                android:text="@string/location_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="#86000000"
+                app:layout_constraintTop_toBottomOf="@+id/text_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/text_passion"
+                android:textSize="16sp">
+        </TextView>
+        <TextView
                 android:id="@+id/text_passion"
                 android:text="@string/passion_txt"
-                android:layout_height="0dp">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/text_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_msg"
+                app:layout_constraintHorizontal_bias="0.5">
         </TextView>
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_height="0dp">
-            <View
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="match_parent"/>
-            <Button
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    app:icon="@drawable/bulle"
-                    style="@style/ImageButton"
-                    android:background="@drawable/round"
-                    android:contentDescription="@string/add_btn"
-                    android:layout_height="match_parent">
-            </Button>
-            <View
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="match_parent"/>
-        </LinearLayout>
-
-    </LinearLayout>
 
 
-    </androidx.cardview.widget.CardView>
+        <Button
+                android:layout_width="70dp"
+                app:icon="@drawable/bullemsg"
+                style="@style/ImageButton"
+                android:contentDescription="@string/add_btn"
+                android:id="@+id/btn_msg"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/text_passion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/round"
+                app:backgroundTint="@color/purpleBordeaux"
+                app:iconPadding="0dp"
+                android:gravity="center"
+                android:insetRight="0dp"
+                android:insetLeft="0dp"
+                app:layout_constraintHorizontal_bias="0.5">
+        </Button>
+        <TextView
+                android:text="@string/age_txt"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:id="@+id/text_age"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toBottomOf="@+id/idMembre"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="1dp"
+                app:layout_constraintBottom_toTopOf="@+id/text_location"
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/purpleBordeauxBis"
+                android:textStyle="bold"/>
 
-</LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+
 
