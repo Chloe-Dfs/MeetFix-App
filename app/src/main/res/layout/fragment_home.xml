@@ -2,18 +2,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
-             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
              android:background="@color/coral"
              tools:context=".HomeFragment">
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
+                  android:layout_height="match_parent"
+                  android:background="@color/bordeaux"
                   android:orientation="vertical">
-    <Button
-            android:text="Carte"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnCarteListe"/>
+        <Button
+                android:text="Carte"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/btnCarteListe"/>
 
+        <!--View quand il y a la carte-->
         <ImageView
                 android:id="@+id/imgCarte"
                 android:layout_width="match_parent"
@@ -23,49 +27,50 @@
 
         </ImageView>
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:id="@+id/layoutHomeCar"
-                  android:visibility="visible"
-                  android:orientation="vertical">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Activités à proximité"/>
-        <!-- Carrousel horizontal pour les activités -->
-        <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_activities"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:orientation="horizontal"
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="9"
+                      android:background="@color/ghostGreen"
+                      android:id="@+id/layoutHomeCar"
+                      android:visibility="visible"
+                      android:orientation="vertical">
 
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:textSize="24sp"
+                    android:text="Activités à proximité"/>
+            <!-- Carrousel horizontal pour les activités -->
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_activities"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"/>
 
+            <!-- Texte "Membres proximité" -->
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:text="Membres proximité"
+                    android:textSize="24sp"/>
 
+            <!-- Carrousel horizontal pour les membres -->
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_membres"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"/>
 
-                android:layout_marginBottom="16dp"/>
-
-        <!-- Texte "Membres proximité" -->
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Membres proximité"
-                android:textSize="24sp"
-                android:layout_marginBottom="16dp"/>
-
-        <!-- Carrousel horizontal pour les membres -->
-        <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_membres"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp"/>
-
-    </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

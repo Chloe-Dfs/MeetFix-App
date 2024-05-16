@@ -1,12 +1,11 @@
 package com.example.testandroid;
 
 
+
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import androidx.constraintlayout.utils.widget.MotionLabel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 //classe controleur
 public class Controller {
@@ -21,9 +20,7 @@ public class Controller {
         BottomNavigationView bottomNavigationView = activity.findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnItemSelectedListener( item -> {
             switch (item.getItemId()) {
-                case R.id.nav_rechercher:
-                    activity.moveToFragment(new RechercherFragment());
-                    break;
+
                 case R.id.nav_favoris:
                     activity.moveToFragment(new FavorisFragment());
                     break;
@@ -39,11 +36,6 @@ public class Controller {
                 case R.id.nav_home:
                     activity.moveToFragment(new HomeFragment());
                     break;
-                case R.id.nav_notification:
-                    activity.moveToFragment(new NotificationsFragment());
-                    break;
-                case R.id.nav_parametres:
-                    activity.moveToFragment(new ParametresFragment());
             }
             return false;
         });
@@ -52,38 +44,29 @@ public class Controller {
 
 
 
-    public void ecouteursBtns() {
-        Button findBtn = activity.findViewById(R.id.nav_rechercher);
-        Button notifBtn = activity.findViewById(R.id.nav_notification);
-        Button parametresBtn = activity.findViewById(R.id.nav_parametres);
+    public void changeViewTop() {
 
-
-
-
-        findBtn.setOnClickListener(new View.OnClickListener() {
+        Button btnR = activity.findViewById(R.id.nav_rechercher);
+        btnR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 activity.moveToFragment(new RechercherFragment());
             }
         });
-
-        notifBtn.setOnClickListener(new View.OnClickListener() {
+        Button btnN = activity.findViewById(R.id.nav_notification);
+        btnN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 activity.moveToFragment(new NotificationsFragment());
             }
         });
-
-        parametresBtn.setOnClickListener(new View.OnClickListener() {
+        Button btnP = activity.findViewById(R.id.nav_parametres);
+        btnP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 activity.moveToFragment(new ParametresFragment());
             }
         });
+
     }
-
-
-
-
-
 }

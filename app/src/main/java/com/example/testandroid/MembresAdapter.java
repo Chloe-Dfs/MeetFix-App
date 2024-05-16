@@ -34,7 +34,7 @@ public class MembresAdapter extends RecyclerView.Adapter<MembresAdapter.ViewHold
         Membres member = membres.get(position);
 
         holder.textViewName.setText(member.getName());
-        holder.textViewSurname.setText(member.getSurname());
+        //holder.textViewSurname.setText(member.getSurname());
         holder.textViewAge.setText(String.valueOf(member.getAge()));
         holder.textViewLocation.setText(member.getLocation());
         holder.textViewPassion.setText(member.getPassion());
@@ -76,7 +76,7 @@ public class MembresAdapter extends RecyclerView.Adapter<MembresAdapter.ViewHold
 
 
         TextView textViewName;
-        TextView textViewSurname;
+        //TextView textViewSurname;
         TextView textViewLocation;
         TextView textViewAge;
         TextView textViewPassion;
@@ -87,7 +87,7 @@ public class MembresAdapter extends RecyclerView.Adapter<MembresAdapter.ViewHold
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewName = itemView.findViewById(R.id.text_name);
-            textViewSurname = itemView.findViewById(R.id.text_surname);
+            //textViewSurname = itemView.findViewById(R.id.text_surname);
             textViewLocation = itemView.findViewById(R.id.text_location);
             textViewAge = itemView.findViewById(R.id.text_age);
             textViewPassion = itemView.findViewById(R.id.text_passion);

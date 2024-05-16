@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Style 1-->
     <color name="white">#FFFFFFFF</color> <!-- Couleur de texte -->
     <color name="black">#000814</color> <!-- Couleur de fond -->
     <color name="purple">#8C5FBF</color> <!-- Couleur primaire -->
@@ -8,4 +9,22 @@
     <color name="ghostGreen">#8018F281</color>
     <color name="coral">#F67979</color> <!-- Couleur d'accent -->
     <color name="ghostCoral">#80F67979</color>
+
+    <!--Style 2 (Chloé)-->
+    <color name="purpleBordeaux">#781131</color>
+    <color name="bordeaux">#6D071A</color>
+
+    <color name="vert_terre">#557311</color>
+    <color name="vert_clair">#bac146</color>
+    <color name="vert_foncé">#163502</color>
+    <color name="lila">#db535f</color>
+    <color name="violet_sombre">#3b2b25</color>
+
+    <color name="vert_foncé_Bis">#2a3c0a</color>
+    <color name="vert_pale">#507808</color>
+    <color name="gris_brume">#dcdedd</color>
+    <color name="rose_pale">#b56655</color>
+    <color name="bordeaux_pale">#6f1c0c</color>
+
+
 </resources>

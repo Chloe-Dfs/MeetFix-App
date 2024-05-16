@@ -3,6 +3,7 @@ package com.example.testandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -16,12 +17,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.top_nav);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setSubtitle("Utilisation ToolBar");
 
         controller = new Controller(this);
 
         moveToFragment(new HomeFragment());
         controller.changeView();
-        controller.ecouteursBtns();
+        controller.changeViewTop();
 
 
     }

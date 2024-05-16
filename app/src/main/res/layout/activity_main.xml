@@ -1,79 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="wrap_content" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:background="#3218F281"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
 
     <!--Barre du haut-->
-    <TableLayout
+    <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
+            android:layout_weight="6"
             android:id="@+id/top_nav"
-            android:layout_height="wrap_content">
-
-        <TableRow>
-            <!--Cellule 1-->
-            <LinearLayout>
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
+            style="@style/Style_top"
+            android:layout_height="0dp"
+            app:contentInsetLeft="10dp"
+            android:layout_gravity="center">
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:orientation="horizontal"
+                android:gravity="center"
+
+                android:paddingRight="20dp"
+                android:layout_height="match_parent">
             <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
                     android:id="@+id/nav_rechercher"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round"
-                    android:text="rechercher"/>
-            </LinearLayout>
-            <!--Cellule 2-->
+                    android:contentDescription="@string/rechercher_btn"
+                    style="@style/ImageButton"
+                    app:iconTint="@color/ghostGreen"
+                    app:icon="@drawable/loupe"/>
             <View
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="4"
+                    android:layout_height="match_parent">
+            </View>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    style="@style/ImageButton"
+                    android:layout_height="match_parent"
+                    android:id="@+id/nav_notification"
+                    android:contentDescription="@string/notif_btn"
+                    app:icon="@drawable/cloche">
+            </Button>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:id="@+id/nav_parametres"
+                    style="@style/ImageButton"
+                    android:contentDescription="@string/para_btn"
+                    app:icon="@drawable/parametres">
+            </Button>
+        </LinearLayout>
 
-            <!--Cellule 3-->
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                <Button
-                        android:layout_width="wrap_content"
-                        android:id="@+id/nav_notification"
-                        android:text="notif"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/round"/>
-
-                <Button
-                        android:layout_width="wrap_content"
-                        android:id="@+id/nav_parametres"
-                        android:text="para"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/round"/>
-
-            </LinearLayout>
-        </TableRow>
-
-        <!-- Ajoutez d'autres lignes au besoin -->
-
-    </TableLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 
     <!--Ecran au milieu. C'est ici que va être contenu toutes les pages de l'appli
     c'est un fragment-->
     <FrameLayout android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:layout_above="@id/bottom_nav"
-                 android:layout_below="@id/top_nav"
+                 android:layout_height="0dp"
+                 android:layout_weight="64"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginBottom="10dp"
                  android:id="@+id/container_view"/>
 
 
     <!--Barre du bas-->
     <com.google.android.material.bottomnavigation.BottomNavigationView android:layout_width="match_parent"
-                                                                       android:layout_height="wrap_content"
+                                                                       android:layout_height="0dp"
+                                                                       android:layout_weight="8"
                                                                        android:id="@+id/bottom_nav"
                                                                        app:menu="@menu/bottom_menu"
-                                                                       style="@style/Style_bottom"
-                                                                       android:layout_alignParentBottom="true"/>
+                                                                       style="@style/Style_bottom"/>
 
-</RelativeLayout>
+</LinearLayout>
