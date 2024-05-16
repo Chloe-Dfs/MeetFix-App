@@ -34,8 +34,7 @@ public class Modele {
 
     //Liste des Membres - Home
     private void initMembres(){
-        Membres mem1 = new Membres("testimg","Chloé",  "Vannes",24, "Mon truc c'est la musique. je passe beaucoup de " +
-                "temps sur ce projet Android mais bon... J'ai plus d'avenir là dedans que dans la bombarde ! Go Mp pour refaire le monde uwu");
+        Membres mem1 = new Membres("testimg","Chloé",  "Vannes",24, "Bombarde, Musique, Manger");
         Membres mem2 = new Membres("karpatest","Fusée",  "Crous",3, "Manger et Dormir");
         Membres mem3 = new Membres("","Théo",  "Lorient",23, "Bosser les TP");
 

@@ -4,16 +4,16 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:background="@color/coral"
+             android:background="@color/white"
              tools:context=".HomeFragment">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
-                  android:background="@color/bordeaux"
                   android:orientation="vertical">
         <Button
                 android:text="Carte"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
+                style="@style/Button_round"
                 android:layout_weight="1"
                 android:id="@+id/btnCarteListe"/>
 
@@ -31,7 +31,6 @@
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="0dp"
                       android:layout_weight="9"
-                      android:background="@color/ghostGreen"
                       android:id="@+id/layoutHomeCar"
                       android:visibility="visible"
                       android:orientation="vertical">

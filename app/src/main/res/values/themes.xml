@@ -11,7 +11,7 @@
     <!--Style Barre nav bas-->
     <style name="Style_top" parent="Widget.AppCompat.Button">
         <item name="android:background">@color/purpleBordeaux</item>
-        <item name="android:buttonStyle">@color/ghostGreen</item>
+        <item name="android:buttonStyle">@color/ghostGreenBis</item>
 
 
     </style>
@@ -22,19 +22,23 @@
         <item name="itemPaddingTop">8dp</item>
         <item name="itemPaddingBottom">8dp</item>
         <item name="labelVisibilityMode">unlabeled</item>
-        <item name="itemIconTint">@color/ghostGreen</item>
+        <item name="itemIconTint">@color/ghostGreenBis</item>
+    </style>
 
+    <style name="Button_round" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/purpleBordeaux</item>
+        <item name="android:radius">15dp</item>
     </style>
 
     <style name="ImageButton" parent="Widget.AppCompat.Button">
         <item name="iconSize">40dp</item>
         <item name="android:background">#00000000</item>
-        <item name="iconTint">@color/ghostGreen</item>
+        <item name="iconTint">@color/ghostGreenBis</item>
     </style>
 
     <style name="Membre_img" parent="CardView">
         <item name="iconSize">40dp</item>
-        <item name="android:background">#00000000</item>
+        <item name="android:background">@color/purpleBordeaux</item>
         <item name="iconTint">@color/bordeaux_pale</item>
         <item name="cardCornerRadius">10dp</item>
         <item name="cardBackgroundColor">@color/ghostCoral</item>

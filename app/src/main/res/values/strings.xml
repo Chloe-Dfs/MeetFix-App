@@ -7,8 +7,11 @@
     <string name="view">view</string>
     <string name="liste_btn">Liste</string>
     <string name="add_btn">Ajouter contact</string>
-    <string name="msg_txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        En suraxa ültimeqonei, zastris ïnfresxa nonimer.
-        Roswïnnev kadio deskem, ïn nni toryuxei.</string>
 
+    <!--Données Exemple-->
+    <string name="nom_txt">Chloé</string>
+    <string name="passion_txt">Bombarde, Cornemuse, Pokémon</string>
+    <string name="age_txt">24</string>
+    <string name="location_txt">Vannes</string>
+    <string name="msg_txt">bonjour</string>
 </resources>
