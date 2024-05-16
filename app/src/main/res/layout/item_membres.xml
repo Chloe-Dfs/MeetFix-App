@@ -1,98 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:background="@drawable/rectangle_circle"
-              android:padding="16dp">
+              android:layout_width="match_parent"
+              android:orientation="horizontal"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Nom de l'activité -->
 
     <!-- Emplacement de l'activité -->
     <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/ghostGreen"
-            app:cardCornerRadius="10dp">
+            android:layout_margin="25dp"
 
+            style="@style/Membre_img">
         <LinearLayout
-                android:gravity="center"
+
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <TextView
+                android:text="Nom"
+
+                android:textStyle="bold"
+                android:id="@+id/text_name"
+                android:textSize="25dp"
                 android:layout_margin="10dp"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+        </TextView>
+
+        <LinearLayout
+
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
             <ImageView
-                    android:layout_width="100dp"
-                    android:id="@+id/idMembre"
 
-                    android:layout_height="100dp">
+                    android:layout_width="200dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/karpatest"
 
+                    android:id="@+id/idMembre">
             </ImageView>
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+
+                <TextView
+                        android:text="24"
+                        android:id="@+id/text_age"
+                        android:textSize="50dp"
+                        android:gravity="end"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                </TextView>
+
+
+
+            </LinearLayout>
+
 
             <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:gravity="center"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_height="match_parent">
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
                 <LinearLayout
 
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                    <TextView
-                            android:text="Nom"
-                            android:textSize="25sp"
-                            android:id="@+id/text_name"
-                            android:layout_marginRight="10dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
 
-                    </TextView>
-                    <TextView
-                            android:text="Surname"
-                            android:textSize="20sp"
-                            android:id="@+id/text_surname"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-                    </TextView>
-                </LinearLayout>
-                <LinearLayout
+                        <TextView
+                                android:text="Vannes"
+                                android:textSize="25dp"
+                                android:id="@+id/text_location"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="0dp">
+                        </TextView>
 
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                    <TextView
-                            android:text="Vannes"
-                            android:id="@+id/text_location"
-                            android:layout_width="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="wrap_content">
-                    </TextView>
 
-                    <TextView
-                            android:text="24"
-                            android:id="@+id/text_age"
-                            android:textSize="15dp"
-                            android:gravity="end"
-                            android:textStyle="bold"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                    </TextView>
 
                 </LinearLayout>
-
                 <TextView
                         android:text="Bombarde"
                         android:id="@+id/text_passion"
                         android:layout_margin="5dp"
+                        android:textSize="16dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_weight="3"
+                        android:layout_height="0dp">
 
                 </TextView>
+
+                <Button
+                        android:id="@+id/btnAdd"
+
+                        style="@style/Membre_img"
+                        android:contentDescription="@string/add_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        app:icon="@drawable/bulle" app:iconGravity="end">
+
+                </Button>
 
 
             </LinearLayout>
@@ -103,3 +130,13 @@
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
+
+        <!-- A mettre ou non :
+                            <TextView
+                                    android:text="Surname"
+                                    android:textSize="20sp"
+                                    android:id="@+id/text_surname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                            </TextView>
+        -->

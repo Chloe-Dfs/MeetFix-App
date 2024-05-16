@@ -1,20 +1,44 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.TestAndroid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+
+        <!--Primary Color -->
+
     </style>
 
 
     <!--Style Barre nav bas-->
+    <style name="Style_top" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/purpleBordeaux</item>
+        <item name="android:buttonStyle">@color/ghostGreen</item>
+
+
+    </style>
+
     <style name="Style_bottom" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:background">@drawable/rectangle_green</item>
+        <item name="android:background">@color/purpleBordeaux</item>
+        <item name="itemIconSize">40dp</item>
+        <item name="itemPaddingTop">8dp</item>
+        <item name="itemPaddingBottom">8dp</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemIconTint">@color/ghostGreen</item>
+
+    </style>
+
+    <style name="ImageButton" parent="Widget.AppCompat.Button">
+        <item name="iconSize">40dp</item>
+        <item name="android:background">#00000000</item>
+        <item name="iconTint">@color/ghostGreen</item>
+    </style>
+
+    <style name="Membre_img" parent="CardView">
+        <item name="iconSize">40dp</item>
+        <item name="android:background">#00000000</item>
+        <item name="iconTint">@color/bordeaux_pale</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardBackgroundColor">@color/ghostCoral</item>
+
     </style>
 
 

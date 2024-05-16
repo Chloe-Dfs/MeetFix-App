@@ -10,10 +10,10 @@ public class Membres {
     private Integer age;
     private String passion;
 
-    public Membres(String img, String name, String surname, String  location,Integer age, String passion){
+    public Membres(String img, String name, String  location,Integer age, String passion){
         this.img = img;
         this.name = name;
-        this.surname = surname;
+        //this.surname = surname;
         this.location = location;
         this.age = age;
         this.passion = passion;
@@ -24,7 +24,7 @@ public class Membres {
     public String getName(){
         return name;
     }
-    public String getSurname() { return surname; }
+    //public String getSurname() { return surname; }
     public String getLocation(){
         return location;
     }
