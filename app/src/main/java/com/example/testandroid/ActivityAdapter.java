@@ -51,7 +51,7 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewName = itemView.findViewById(R.id.text_name);
+            textViewName = itemView.findViewById(R.id.act_name);
             textViewLocation = itemView.findViewById(R.id.text_location);
         }
     }
