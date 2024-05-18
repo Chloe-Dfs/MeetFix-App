@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">testAndroid</string>
+    <string name="app_name">MeetFix</string>
     <string name="carte_btn">Carte</string>
     <string name="rechercher_btn">Rechercher</string>
     <string name="notif_btn">Notifications</string>
@@ -13,5 +13,5 @@
     <string name="passion_txt">Bombarde, Cornemuse, Pokémon</string>
     <string name="age_txt">24</string>
     <string name="location_txt">Vannes</string>
-    <string name="msg_txt">bonjour</string>
+    <string name="msg_txt">Envoyer un message.</string>
 </resources>

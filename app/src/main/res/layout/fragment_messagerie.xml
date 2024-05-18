@@ -1,113 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".MessagerieFragment">
-    <LinearLayout
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
+
             android:layout_height="match_parent">
-        <!--information photo nom etc-->
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/white">
 
-        </LinearLayout>
-        <!--espace msg-->
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="9"
-                android:background="@color/ghostCoral">
-            <!--msg 1-->
-            <LinearLayout
-                    android:orientation="horizontal"
+        <androidx.cardview.widget.CardView
+                android:id="@+id/msg_membre"
+                android:layout_width="230dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardBackgroundColor="@color/ghostGreen"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="28dp"
+                app:cardCornerRadius="15dp">
+            <TextView
+                    android:text="TextView"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@color/ghostCoral">
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView"/>
+        </androidx.cardview.widget.CardView>
 
-                <TextView
-                        android:text="FEUR"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/round"/>
-                <View
-                        android:text="@string/msg_txt"
-                        android:layout_width="0dp"
-                        android:layout_weight="4"
-                        android:layout_height="match_parent"
-                        />
-            </LinearLayout>
-            <!--msg 2-->
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@color/ghostCoral">
-
-                <View
-                        android:text="@string/msg_txt"
-                        android:layout_width="0dp"
-                        android:layout_weight="4"
-                        android:layout_height="match_parent"/>
-                <TextView
-                        android:text="@string/msg_txt"
-                        android:id="@+id/msg_exr"
-                        android:layout_width="0dp"
-                        android:layout_weight="6"
-                        android:layout_height="match_parent"
-                        style="@style/SendedMessage"/>
-            </LinearLayout>
-            <!--msg 3-->
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@color/ghostCoral">
-                <TextView
-                        android:text=""
-
-                        android:layout_width="0dp"
-                        android:layout_weight="5"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/round"/>
-                <View
-                        android:text="@string/msg_txt"
-                        android:layout_width="0dp"
-                        android:layout_weight="5"
-                        android:layout_height="match_parent"/>
-            </LinearLayout>
-
-        </LinearLayout>
-        <!--bottom-->
-        <LinearLayout
-                android:orientation="horizontal"
+        <ListView
+                android:id="@+id/list_msg"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/purpleBordeaux">
-
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottom_messagerie"
+                app:layout_constraintTop_toBottomOf="@+id/msg_membre"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ghostCoral"
+                android:id="@+id/bottom_messagerie"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0">
             <EditText
-                    android:layout_width="316dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    android:gravity="start|top"
-                    android:ems="10"
-                    android:id="@+id/editTextTextMultiLine"/>
+                    android:layout_width="310dp"
+                    android:layout_height="48dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#86000000"
+                    android:textSize="15dp"
+                    android:id="@+id/txt_msg"
+                    android:hint="@string/msg_txt"/>
             <Button
-                    android:text="Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button2"/>
-        </LinearLayout>
-    </LinearLayout>
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/btn_envoyer"
+                    app:backgroundTint="@color/purpleBordeaux"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_msg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/envoyer"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/add_btn"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

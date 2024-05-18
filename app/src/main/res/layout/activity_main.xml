@@ -8,51 +8,12 @@
               android:layout_height="match_parent">
 
     <!--Barre du haut-->
-    <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_weight="5"
-            android:id="@+id/top_nav"
-            style="@style/Style_top"
-            android:layout_height="0dp"
-            app:contentInsetLeft="5dp"
-            android:layout_gravity="center">
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="match_parent"
-                android:id="@+id/linearLayout" android:gravity="center_horizontal">
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/nav_rechercher"
-                    android:contentDescription="@string/rechercher_btn"
-                    style="@style/ImageButton"
-                    app:icon="@drawable/loupe"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-            <Button
-                    android:layout_width="0dp"
-                    style="@style/ImageButton"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/nav_notification"
-                    android:contentDescription="@string/notif_btn"
-                    app:icon="@drawable/cloche"
-                    app:layout_constraintEnd_toStartOf="@+id/nav_parametres" app:layout_constraintTop_toTopOf="parent"
-            >
-            </Button>
-            <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/nav_parametres"
-                    style="@style/ImageButton"
-                    android:contentDescription="@string/para_btn"
-                    app:icon="@drawable/parametres"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-            </Button>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
+                                       android:layout_height="0dp"
+                                       android:layout_weight="6"
+                                       android:theme="@style/Style_bottom"
+                                       android:id="@+id/top_nav"/>
 
-    </androidx.appcompat.widget.Toolbar>
 
 
     <!--Ecran au milieu. C'est ici que va être contenu toutes les pages de l'appli
@@ -61,7 +22,6 @@
                  android:layout_height="0dp"
                  android:layout_weight="64"
                  android:layout_marginTop="10dp"
-                 android:layout_marginBottom="10dp"
                  android:id="@+id/container_view"/>
 
 

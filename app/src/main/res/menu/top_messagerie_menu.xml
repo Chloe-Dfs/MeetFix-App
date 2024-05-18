@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/nav_retour"
+            android:icon="@drawable/retour"
+            android:iconTint="@color/ghostGreenBis"
+            android:title="TODO"
+            app:showAsAction="always"/>
+    <item
+            android:id="@+id/nav_rechercher"
+            android:icon="@drawable/loupe"
+            android:title="TODO"
+            app:showAsAction="always"/>
+
+</menu>

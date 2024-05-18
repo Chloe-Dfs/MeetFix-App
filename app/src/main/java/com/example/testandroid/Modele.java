@@ -20,6 +20,8 @@ public class Modele {
         initMembres(); // ajouter membres à la liste
     }
 
+
+
     //Liste des Activités - Home
     private void initActivite(){
         Activite act1 = new Activite("Réparer Ordinateur", "Vannes" );
