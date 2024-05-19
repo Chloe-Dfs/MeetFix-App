@@ -88,8 +88,7 @@ public class MainActivity extends AppCompatActivity {
         String json = null;
         System.out.println("In");
         try {
-            FileResourcesUtils app = new FileResourcesUtils();
-            InputStream is = app.getFileFromResourceAsStream();
+            InputStream is = getAssets().open(fileName);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
