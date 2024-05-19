@@ -26,9 +26,9 @@ public class Activite {
         this.duree = objActivite.get("duree").toString();
         this.idOrganisateur = objActivite.get("id_organisateur").toString();
         this.maxPersonnes = objActivite.getInt("max_personnes");
-        this.description = objActivite.get("description").toString();
+        this.description = objActivite.get("detail").toString();
         this.exigences = objActivite.get("exigences").toString();
-        this.aApporter = objActivite.get("aApporter").toString();
+        this.aApporter = objActivite.get("a_apporter").toString();
     }
 
     public String getId() {

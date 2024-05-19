@@ -32,9 +32,8 @@ public class Modele {
     //Liste des Activités - Home
     private void initActivite() throws JSONException {
         JSONArray act = MainActivity.getEvenements();
-        for (int i = 0 ; i < act.length(); i++) {
+        for (int i = 0 ; i < act.length(); i++)
             activites.add(new Activite(act.getJSONObject(i)));
-        }
 
         /*
         Activite act1 = new Activite("Réparer Ordinateur", "Vannes" );

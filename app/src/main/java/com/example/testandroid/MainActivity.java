@@ -41,13 +41,10 @@ public class MainActivity extends AppCompatActivity {
         controller.openAppView();
         controller.changeViewBottomNav();
 
-        System.out.println("Mon test");
         try {
             // get JSONObject from JSON file
             utilisateurs = new JSONArray(loadJSONFromAsset("utilisateurs.json"));
-            System.out.println("Mon test 2");
             evenements = new JSONArray(loadJSONFromAsset("evenements.json"));
-            System.out.println("Mon test 3");
         } catch(JSONException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -92,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
     public String loadJSONFromAsset(String fileName) throws IOException {
         String json = null;
-        // System.out.println(Arrays.toString(getAssets().list("")));
         try {
             InputStream is = getAssets().open(fileName);
             int size = is.available();
@@ -100,10 +96,8 @@ public class MainActivity extends AppCompatActivity {
             is.read(buffer);
             is.close();
             json = new String(buffer, StandardCharsets.UTF_8);
-            System.out.println(json);
         } catch (IOException ex) {
             ex.printStackTrace();
-            System.out.println("here");
             return null;
         }
         return json;
