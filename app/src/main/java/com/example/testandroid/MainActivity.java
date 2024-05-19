@@ -1,6 +1,7 @@
 package com.example.testandroid;
 
 
+import android.content.res.AssetManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
@@ -16,6 +17,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+
+import static java.security.AccessController.getContext;
 
 
 //classe Vue
@@ -46,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("Mon test 3");
         } catch(JSONException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -84,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
         supportInvalidateOptionsMenu();
     }
 
-    public String loadJSONFromAsset(String fileName){
+    public String loadJSONFromAsset(String fileName) throws IOException {
         String json = null;
-        System.out.println("In");
+        // System.out.println(Arrays.toString(getAssets().list("")));
         try {
             InputStream is = getAssets().open(fileName);
             int size = is.available();
@@ -94,8 +100,10 @@ public class MainActivity extends AppCompatActivity {
             is.read(buffer);
             is.close();
             json = new String(buffer, StandardCharsets.UTF_8);
+            System.out.println(json);
         } catch (IOException ex) {
             ex.printStackTrace();
+            System.out.println("here");
             return null;
         }
         return json;
