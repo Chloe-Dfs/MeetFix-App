@@ -9,12 +9,21 @@ import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 
 //classe Vue
 public class MainActivity extends AppCompatActivity {
         private Controller controller;
         private Modele modele;
+        private static JSONArray utilisateurs;
+        private static JSONArray evenements;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +37,31 @@ public class MainActivity extends AppCompatActivity {
         controller.openAppView();
         controller.changeViewBottomNav();
 
-
-
+        System.out.println("Mon test");
+        try {
+            // get JSONObject from JSON file
+            utilisateurs = new JSONArray(loadJSONFromAsset("utilisateurs.json"));
+            System.out.println("Mon test 2");
+            evenements = new JSONArray(loadJSONFromAsset("evenements.json"));
+            System.out.println("Mon test 3");
+        } catch(JSONException e) {
+            e.printStackTrace();
+        }
     }
+
     //2 Méthodes pour la gestion du ToolBar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_home_menu, menu);
         return true;
+    }
+
+    public static JSONArray getUtilisateurs(){
+        return utilisateurs;
+    }
+
+    public static JSONArray getEvenements(){
+        return evenements;
     }
 
     @Override
@@ -58,5 +84,21 @@ public class MainActivity extends AppCompatActivity {
         supportInvalidateOptionsMenu();
     }
 
-
+    public String loadJSONFromAsset(String fileName){
+        String json = null;
+        System.out.println("In");
+        try {
+            FileResourcesUtils app = new FileResourcesUtils();
+            InputStream is = app.getFileFromResourceAsStream();
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, StandardCharsets.UTF_8);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
 }

@@ -7,6 +7,9 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 
 //classe controleur
 public class Controller {

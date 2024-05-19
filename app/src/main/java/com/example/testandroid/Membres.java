@@ -1,22 +1,35 @@
 package com.example.testandroid;
 
 import android.widget.ImageView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class Membres {
+    public String id;
     private String img;
     private String name;
-    private String surname;
     private String location;
-    private Integer age;
-    private String passion;
+    private int age;
+    private ArrayList<String> passion;
 
-    public Membres(String img, String name, String  location,Integer age, String passion){
-        this.img = img;
-        this.name = name;
-        //this.surname = surname;
-        this.location = location;
-        this.age = age;
-        this.passion = passion;
+    public Membres(JSONObject objMembre) throws JSONException {
+        this.id = objMembre.get("id").toString();
+        this.img = objMembre.get("pic").toString();
+        this.name = objMembre.get("nom").toString();
+        this.location = objMembre.get("lieu").toString();
+        this.age = objMembre.getInt("age");
+
+        JSONArray mem = MainActivity.getUtilisateurs();
+        for (int i = 0 ; i < mem.length(); i++) {
+            passion.add(mem.get(i).toString());
+        }
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getImg() {return img; }
@@ -24,14 +37,14 @@ public class Membres {
     public String getName(){
         return name;
     }
-    //public String getSurname() { return surname; }
+
     public String getLocation(){
         return location;
     }
 
-    public Integer getAge() { return age; }
+    public int getAge() { return age; }
 
-    public String getPassion(){
+    public ArrayList<String> getPassion(){
         return passion;
     }
 

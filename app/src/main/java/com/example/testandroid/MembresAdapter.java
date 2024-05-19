@@ -37,7 +37,14 @@ public class MembresAdapter extends RecyclerView.Adapter<MembresAdapter.ViewHold
         //holder.textViewSurname.setText(member.getSurname());
         holder.textViewAge.setText(String.valueOf(member.getAge()));
         holder.textViewLocation.setText(member.getLocation());
-        holder.textViewPassion.setText(member.getPassion());
+
+        String textPassion = "";
+        for(int i = 0; i < member.getPassion().size(); i++){
+            textPassion += member.getPassion().get(i);
+            if(i != member.getPassion().size() - 1)
+              textPassion += ", ";
+        }
+        holder.textViewPassion.setText(textPassion);
 
         String imgPath = member.getImg();
         if (!member.getImg().isEmpty()) {
