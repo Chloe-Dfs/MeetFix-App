@@ -74,7 +74,7 @@
             <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Membres proximité"
+                    android:text="Membres à proximité"
                     android:textSize="24sp"
                     android:id="@+id/textView4"
                     app:layout_constraintTop_toBottomOf="@+id/recycler_activities"

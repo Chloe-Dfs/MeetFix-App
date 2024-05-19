@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import org.json.JSONException;
 
 import java.util.List;
 
@@ -47,7 +48,12 @@ public class HomeFragment extends Fragment {
 
 
         // Initialiser Modele
-        Modele modele = new Modele();
+        Modele modele = null;
+        try {
+            modele = new Modele();
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
 
         // Obtenir Liste des activités et membres à proximité du Modele
         List<Activite> activites = modele.getActivites();

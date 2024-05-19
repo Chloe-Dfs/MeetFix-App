@@ -1,6 +1,13 @@
 package com.example.testandroid;
 
 
+import android.util.JsonReader;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +18,7 @@ public class Modele {
     private List<Activite> activites; //liste activités Home
     private List<Membres> membres; //liste membres Home
 
-    public Modele(){
+    public Modele() throws JSONException {
 
         // Home
         activites = new ArrayList<>();
@@ -23,7 +30,13 @@ public class Modele {
 
 
     //Liste des Activités - Home
-    private void initActivite(){
+    private void initActivite() throws JSONException {
+        JSONArray act = MainActivity.getEvenements();
+        for (int i = 0 ; i < act.length(); i++) {
+            activites.add(new Activite(act.getJSONObject(i)));
+        }
+
+        /*
         Activite act1 = new Activite("Réparer Ordinateur", "Vannes" );
         Activite act2 = new Activite("Upcycling vêtement", "Auray");
         Activite act3 = new Activite("Recyclage cigarette", "Auray");
@@ -32,14 +45,21 @@ public class Modele {
         activites.add(act1);
         activites.add(act2);
         activites.add(act3);
-        activites.add(act4);
+        activites.add(act4);*/
     }
+
     public List<Activite> getActivites() {
         return activites;
     }
 
     //Liste des Membres - Home
-    private void initMembres(){
+    private void initMembres() throws JSONException {
+        JSONArray mem = MainActivity.getUtilisateurs();
+        for (int i = 0 ; i < mem.length(); i++) {
+            membres.add(new Membres(mem.getJSONObject(i)));
+        }
+
+        /*
         Membres mem1 = new Membres("testimg","Chloé",  "Vannes",24, "Bombarde, Musique, Manger");
         Membres mem2 = new Membres("ewen_img","Ewen",  "Centrale Paris",46, "Informatique, 3d");
         Membres mem3 = new Membres("","Jean",  "Concarneau",21, "Alchimie, Psychologie, Débat");
@@ -74,9 +94,10 @@ public class Modele {
         membres.add(mem14);
         membres.add(mem15);
         membres.add(mem16);
-        membres.add(mem17);
+        membres.add(mem17);*/
 
     }
+
     public List<Membres> getMembres() {
         return membres;
     }

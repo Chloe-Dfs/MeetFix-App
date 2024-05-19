@@ -27,7 +27,7 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Activite activity = activities.get(position);
-        holder.textViewName.setText(activity.getName());
+        holder.textViewName.setText(activity.getNom());
         holder.textViewLocation.setText(activity.getLocation());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
