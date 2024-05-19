@@ -1,0 +1,54 @@
+[
+  {
+    "id": "0A",
+    "nom": "réparer ordinateur",
+    "lieu": "Vannes",
+    "jour": "01-06-24",
+    "heure": "14:00:00",
+    "duree": "3:00:00",
+    "id_organisateur": 1,
+    "max_personnes": 4,
+    "detail": "Lors de cet atelier, nous allons apprendre à réparer des ordinateurs fixes d'un point de vue hardware. Comment entretenir sur du long terme vis-à-vis de la poussière et détecter quel composant est la cause d'un souci.",
+    "exigences": "N/A",
+    "a_apporter": "Votre ordinateur fixe (facultatif), des écrans / souris / claviers seront disponibles sur place."
+  },
+  {
+    "id": "0D",
+    "nom": "Recyclage cigarettes",
+    "lieu": "Paris",
+    "jour": "29-05-24",
+    "heure": "07:00:00",
+    "duree": "1:30:00",
+    "id_organisateur": 6,
+    "max_personnes": 2,
+    "detail": "Les nouveaux vecteurs sociaux ne sont plus les chaussures ou les vêtements, ce sont les mégots. Apprenez à recycler les mégots de cigarettes pour faire des bijoux, des meubles ou encore des nouvelles cigarettes ! ",
+    "exigences": "Savoir fouiller des poubelles.",
+    "a_apporter": "Des gants."
+  },
+  {
+    "id": "0C",
+    "nom": "Mécanique",
+    "lieu": "Baden",
+    "jour": "15-06-24",
+    "heure": "09:00:00",
+    "duree": "6:00:00",
+    "id_organisateur": 5,
+    "max_personnes": 3,
+    "detail": "Marre d'être dépendant des garagistes ? Je vais vous apprendre à diagnostiquer et réparer votre voiture vous-même. Lors de cette journée de 2x3h, je vais vous enseigner les différentes parties d'une voiture et les soucis qui peuvent arriver. À la fin de la journée, vous serez en mesure de corriger les soucis mineurs vous même.",
+    "exigences": "N/A",
+    "a_apporter": "Un casse-croûte."
+  },
+  {
+    "id": "0B",
+    "nom": "Upcycling vêtements",
+    "lieu": "Auray",
+    "jour": "06-09-24",
+    "heure": "03:00:00",
+    "duree": "6:00:00",
+    "id_organisateur": 0,
+    "max_personnes": 6,
+    "detail": "BUCKLE UP BUCKAROOS ! Nous allons réparer vos vêtements ! WOUHOU",
+    "exigences": "Sachez coudre, les enfants.",
+    "a_apporter": "Votre CAFETIERE ! VOus en aurez besoin !"
+  }
+]
