@@ -22,7 +22,7 @@ public class Membres {
         this.location = objMembre.get("lieu").toString();
         this.age = objMembre.getInt("age");
 
-        JSONArray mem = MainActivity.getUtilisateurs();
+        JSONArray mem = (JSONArray) objMembre.get("Passions");
         for (int i = 0 ; i < mem.length(); i++) {
             this.passion.add(mem.get(i).toString());
         }

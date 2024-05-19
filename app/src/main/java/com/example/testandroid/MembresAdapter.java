@@ -34,7 +34,6 @@ public class MembresAdapter extends RecyclerView.Adapter<MembresAdapter.ViewHold
         Membres member = membres.get(position);
 
         holder.textViewName.setText(member.getName());
-        //holder.textViewSurname.setText(member.getSurname());
         holder.textViewAge.setText(String.valueOf(member.getAge()));
         holder.textViewLocation.setText(member.getLocation());
 
