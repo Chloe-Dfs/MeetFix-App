@@ -33,8 +33,8 @@
 
     <style name="Widget.Material3.Button.Circular" parent="Widget.MaterialComponents.Button">
         <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Circular</item>
-        <item name="backgroundTint">@color/Vert_eau</item>
-        <item name="iconTint">@color/Vert_fonce</item>
+        <item name="backgroundTint">@color/Vert_fonce</item>
+        <item name="iconTint">@color/Vert_eau</item>
         <item name="android:height">@dimen/iconTaille</item>
         <item name="android:width">@dimen/iconTaille</item>
     </style>
@@ -50,25 +50,29 @@
     <style name="Style_ToolBar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
         <item name="android:background">@color/Vert_fonce</item>
         <item name="titleTextColor">@color/white</item>
+        <item name="titleMarginStart">8dp</item>
+        <item name="titleTextAppearance">@style/Widget.AppCompat.TextView.2</item>
         <item name="android:theme">@style/ToolbarIconTheme</item>
     </style>
 
     <style name="ToolbarIconTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="colorControlNormal">@color/white</item>
+        <item name="iconTint">@color/white</item>
+        <item name="iconGravity">textTop</item>
+        <item name="android:layout_marginTop">2dp</item>
     </style>
 
     <!-- Style Bottom Nav-->
     <style name="Style_BottomNavBar" parent="Widget.Design.BottomNavigationView">
         <item name="android:background">@color/Vert_fonce</item>
         <item name="itemIconTint">@color/white</item>
-        <item name="itemIconSize">40dp</item>
+        <item name="itemIconSize">@dimen/icon</item>
         <item name="itemPaddingTop">8dp</item>
         <item name="itemPaddingBottom">8dp</item>
         <item name="labelVisibilityMode">unlabeled</item>
     </style>
 
     <style name="CardView." parent="CardView">
-        <item name="cardBackgroundColor">@color/Vert_flash</item>
+        <item name="cardBackgroundColor">@color/Vert_eau2</item>
         <item name="cardCornerRadius">15dp</item>
     </style>
 
@@ -85,7 +89,18 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <!-- Titre Menu TextView-->
+    <style name="Widget.AppCompat.TextView.3" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/Marron_sombre</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
     <style name="Base.TextAppearance.MaterialComponents.Button." parent="Base.TextAppearance.MaterialComponents.Button">
+        <item name="android:textStyle">bold</item>
         <item name="android:textSize">10dp</item>
         <item name="android:text">@string/detail_txt</item>
     </style>

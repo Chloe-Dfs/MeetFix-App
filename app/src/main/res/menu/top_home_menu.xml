@@ -7,10 +7,7 @@
         <item
                 android:id="@+id/nav_notification"
                 android:actionLayout="@drawable/cloche"
-                android:iconTint="@color/ghostGreenBis"
                 android:title=""
-                
-
                 app:showAsAction="always"/>
         <item
                 android:id="@+id/nav_rechercher"

@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-
+        style="@style/CardView."
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -10,37 +10,34 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
 
-
-        app:cardBackgroundColor="@color/white"
         app:cardElevation="0dp"
         android:animateLayoutChanges="true"
 >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content">
         <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/outils"
+                android:layout_width="@dimen/icon"
+                android:layout_height="@dimen/icon"
+                android:src="@drawable/outils"
                 android:id="@+id/logoAct"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_margin="10dp"
                 android:background="@drawable/round"
-                android:backgroundTint="@color/white"
-                app:layout_constraintEnd_toStartOf="@+id/act_name"/>
+                android:backgroundTint="@color/Vert_eau"/>
         <TextView
                 android:text="Réparation meuble"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 android:id="@+id/act_name"
                 android:textColor="@color/Vert_fonce"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@id/logoAct"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintVertical_chainStyle="packed">
         </TextView>
         <TextView
@@ -49,8 +46,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Vert_fonce"
+                android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/act_name"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/logoAct"
                 app:layout_constraintBottom_toTopOf="@+id/btn_detail">
 
@@ -58,32 +55,33 @@
         <com.google.android.material.button.MaterialButton
                 android:text="@string/detail_txt"
                 style="@style/Widget.Material3.Button.Circular.2"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/iconTaille"
                 android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Button."
                 android:layout_width="0dp"
+                android:textSize="14dp"
                 android:id="@+id/btn_detail"
-                android:padding="0dp"
                 app:layout_constraintTop_toBottomOf="@id/logoAct"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="16dp"
                 app:layout_constraintEnd_toStartOf="@+id/button3"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:gravity="center" android:insetRight="0dp"
-                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:layout_marginEnd="15dp"
         />
         <com.google.android.material.button.MaterialButton
                 android:layout_width="@dimen/icon"
-                android:layout_height="@dimen/icon"
+                android:layout_height="0dp"
                 android:id="@+id/button3"
                 app:layout_constraintStart_toEndOf="@id/btn_detail"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_location"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:icon="@drawable/listeapuces"
-                app:iconSize="25dp"
-                android:padding="2sp"
+                app:icon="@drawable/favoris"
+                app:iconSize="@dimen/icon"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="8dp"
                 app:iconGravity="textTop"
-                android:contentDescription="@string/add_btn"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"/>
+                app:iconTint="@color/Vert_fonce"
+                android:contentDescription="@string/add_btn"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
