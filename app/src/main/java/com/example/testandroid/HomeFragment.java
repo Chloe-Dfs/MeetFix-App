@@ -3,14 +3,12 @@ package com.example.testandroid;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import org.json.JSONException;
 
@@ -45,10 +43,8 @@ public class HomeFragment extends Fragment {
         recyclerViewAct = view.findViewById(R.id.recycler_activities);
         recyclerViewMembres = view.findViewById(R.id.recycler_membres);
 
-
-
         // Initialiser Modele
-        Modele modele = null;
+        Modele modele;
         try {
             modele = new Modele();
         } catch (JSONException e) {

@@ -11,11 +11,10 @@
                                                        android:id="@+id/linearLayout2">
         <Button
                 android:text="Carte"
+                style="@style/Widget.Material3.Button.Circular.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnCarteListe"
-                android:background="@drawable/round"
-                app:backgroundTint="@color/purpleBordeaux"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp"
                 app:layout_constraintTop_toTopOf="parent"

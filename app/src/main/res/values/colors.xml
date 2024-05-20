@@ -3,31 +3,46 @@
     <!--Style 1-->
     <color name="white">#FFFFFFFF</color> <!-- Couleur de texte -->
     <color name="black">#000814</color> <!-- Couleur de fond -->
-    <color name="purple">#8C5FBF</color> <!-- Couleur primaire -->
-    <color name="ghostPurple">#808C5FBF</color>
-    <color name="green">#18F281</color> <!-- Couleur secondaire-->
-    <color name="ghostGreen">#8018F281</color>
-    <color name="ghostGreenBis">#857BF7B6</color>
-    <color name="coral">#F67979</color> <!-- Couleur d'accent -->
+
+    <color name="Vert_fonce">#388E3C</color>
+    <color name="Vert_flash">#00C853</color>
+    <color name="Vert_eau">#EEF6EC</color>
+    <color name="Marron_sombre">#240C04</color>
+<!--
+    <color name="coral">#F67979</color>
     <color name="ghostCoral">#80F67979</color>
     <color name="ghostCoralBis">#80FFB6B6</color>
 
-    <!--Style 2 (Chloé)-->
+
     <color name="purpleBordeaux">#781131</color>
     <color name="purpleBordeauxBis">#650819</color>
     <color name="bordeaux">#6D071A</color>
 
-    <color name="vert_terre">#557311</color>
-    <color name="vert_clair">#bac146</color>
-    <color name="vert_foncé">#163502</color>
+
     <color name="lila">#db535f</color>
     <color name="violet_sombre">#3b2b25</color>
 
-    <color name="vert_foncé_Bis">#2a3c0a</color>
-    <color name="vert_pale">#507808</color>
+
     <color name="gris_brume">#dcdedd</color>
     <color name="rose_pale">#b56655</color>
     <color name="bordeaux_pale">#6f1c0c</color>
+
+    <color name="vertclair">#81F495</color>
+    <color name="vert_foncé_Bis">#2a3c0a</color>
+    <color name="vert_pale">#507808</color>
+    <color name="vert_terre">#557311</color>
+    <color name="vert_clair">#bac146</color>
+    <color name="vert_foncé">#163502</color>
+    <color name="green">#18F281</color>
+    <color name="ghostGreen">#8018F281</color>
+    <color name="ghostGreenBis">#857BF7B6</color>
+    <color name="lawngreen">#96F550</color>
+    <color name="peargSombre">#C3D350</color>
+    <color name="peargClair">#E6F14A</color>
+    <color name="mindarogreen">#D3E298</color>
+    <color name="olivine">#8CBA80</color>
+    <color name="citrongreen">#CACF85</color>
+-->
 
 
 </resources>

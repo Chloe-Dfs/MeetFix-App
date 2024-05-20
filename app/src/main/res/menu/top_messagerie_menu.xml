@@ -6,7 +6,7 @@
     <item
             android:id="@+id/nav_retour"
             android:icon="@drawable/retour"
-            android:iconTint="@color/ghostGreenBis"
+            android:iconTint="@color/white"
             android:title="TODO"
             app:showAsAction="always"/>
     <item

@@ -19,7 +19,7 @@
                 android:layout_height="100dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:cardBackgroundColor="@color/ghostGreen"
+                app:cardBackgroundColor="@color/white"
                 android:layout_marginTop="40dp"
                 android:layout_marginStart="28dp"
                 app:cardCornerRadius="15dp">
@@ -41,7 +41,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/ghostCoral"
+                android:background="@color/white"
                 android:id="@+id/bottom_messagerie"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
@@ -64,7 +64,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:id="@+id/btn_envoyer"
-                    app:backgroundTint="@color/purpleBordeaux"
+                    app:backgroundTint="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/txt_msg"
                     app:layout_constraintTop_toTopOf="parent"

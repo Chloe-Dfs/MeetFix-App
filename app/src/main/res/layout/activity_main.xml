@@ -3,7 +3,7 @@
               xmlns:app="http://schemas.android.com/apk/res-auto"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
-              android:background="@color/ghostCoralBis"
+              style="@style/Theme.MeetFixGreen"
               android:orientation="vertical"
               android:layout_height="match_parent">
 
@@ -11,7 +11,7 @@
     <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
                                        android:layout_height="0dp"
                                        android:layout_weight="6"
-                                       android:theme="@style/Style_bottom"
+                                       style="@style/Style_ToolBar"
                                        android:id="@+id/top_nav"/>
 
 
@@ -31,7 +31,7 @@
                                                                        android:layout_weight="6"
                                                                        android:id="@+id/bottom_nav"
                                                                        app:menu="@menu/bottom_menu"
-                                                                       style="@style/Style_bottom"
+                                                                       style="@style/Style_BottomNavBar"
                                                                        android:contentDescription="@string/view"/>
 
 </LinearLayout>
