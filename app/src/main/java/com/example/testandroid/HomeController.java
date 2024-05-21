@@ -25,16 +25,13 @@ public class HomeController {
 
     public void btnCarteListeListener() {
         if (btnCartel != null){
-            btnCartel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (isListDisplayed){
-                        homefragment.showCarte();
-                    } else {
-                        homefragment.showListe();
-                    }
-                    isListDisplayed = !isListDisplayed;
+            btnCartel.setOnClickListener(view -> {
+                if (isListDisplayed){
+                    homefragment.showCarte();
+                } else {
+                    homefragment.showListe();
                 }
+                isListDisplayed = !isListDisplayed;
             }) ;
         }
 

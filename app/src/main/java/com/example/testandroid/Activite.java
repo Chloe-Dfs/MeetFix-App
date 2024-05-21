@@ -31,6 +31,20 @@ public class Activite {
         this.aApporter = objActivite.get("a_apporter").toString();
     }
 
+    public Activite(String id, String name, String loc, String day, String hour, String duration, String orga, int capac, String desc, String oblig, String bring){
+        this.id = id;
+        this.nom = name;
+        this.location = loc;
+        this.jour = day;
+        this.heure = hour;
+        this.duree = duration;
+        this.idOrganisateur = orga;
+        this.maxPersonnes = capac;
+        this.description = desc;
+        this.exigences = oblig;
+        this.aApporter = bring;
+    }
+
     public String getId() {
         return id;
     }
