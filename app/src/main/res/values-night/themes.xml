@@ -1,10 +1,105 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.TestAndroid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">@color/Vert_fonce</item>
+        <item name="colorSecondary">@color/Vert_flash</item>
+        <item name="android:windowBackground">@color/Vert_eau</item>
+        <item name="toolbarStyle">@style/Style_ToolBar</item>
+
+        <item name="materialButtonStyle">@style/Widget.Material3.Button.Circular</item>
+
+    </style>
+
+    <!--Définition de la taille des icones et leur background-->
+    <item name="icon" type="dimen" format="dimension">40dp</item>
+    <item name="iconTaille" type="dimen" format="dimension">60dp</item>
+
+    <!--Style Bouton sans modification-->
+    <style name="Widget.Material3.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">0dp</item>
+        <item name="android:width">0dp</item>
+        <item name="height">0dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <!--Bouton rond et Vert-->
+    <style name="ShapeAppearance.MaterialComponents.Circular" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <style name="Widget.Material3.Button.Circular" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Circular</item>
+        <item name="backgroundTint">@color/Vert_fonce</item>
+        <item name="iconTint">@color/Vert_eau</item>
+        <item name="android:height">@dimen/iconTaille</item>
+        <item name="android:width">@dimen/iconTaille</item>
+    </style>
+
+    <style name="Widget.Material3.Button.Circular.2" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/Vert_fonce</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Circular</item>
+
+    </style>
+
+
+    <!-- Style ToolBar -->
+    <style name="Style_ToolBar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="android:background">@color/Vert_fonce</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="titleMarginStart">8dp</item>
+        <item name="titleTextAppearance">@style/Widget.AppCompat.TextView.2</item>
+        <item name="android:theme">@style/ToolbarIconTheme</item>
+    </style>
+
+    <style name="ToolbarIconTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="iconTint">@color/white</item>
+        <item name="iconGravity">textTop</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <!-- Style Bottom Nav-->
+    <style name="Style_BottomNavBar" parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">@color/Vert_fonce</item>
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemIconSize">@dimen/icon</item>
+        <item name="itemPaddingTop">8dp</item>
+        <item name="itemPaddingBottom">8dp</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+    </style>
+
+    <style name="CardView." parent="CardView">
+        <item name="cardBackgroundColor">@color/Vert_eau2</item>
+        <item name="cardCornerRadius">15dp</item>
+    </style>
+
+    <!--Petit TextView-->
+    <style name="Widget.AppCompat.TextView." parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/Vert_flash</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <!--Grand TextView-->
+    <style name="Widget.AppCompat.TextView.2" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Titre Menu TextView-->
+    <style name="Widget.AppCompat.TextView.3" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/Marron_sombre</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="Base.TextAppearance.MaterialComponents.Button." parent="Base.TextAppearance.MaterialComponents.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:text">@string/detail_txt</item>
     </style>
 </resources>

@@ -3,20 +3,20 @@
     <style name="Theme.MeetFixGreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
 
-        <item name="android:colorPrimary">@color/Vert_fonce</item>
-        <item name="colorSecondary">@color/Vert_flash</item>
-        <item name="android:windowBackground">@color/Vert_eau</item>
-        <item name="toolbarStyle">@style/Style_ToolBar</item>
+        <item name="android:colorPrimary">@color/Vert_fonce</item> <!--Couleur Primaire et NavBar-->
+        <item name="colorSecondary">@color/Vert_flash</item> <!--Couleur Secondaire -->
+        <item name="android:windowBackground">@color/Vert_eau</item> <!--Couleur Background de l'appli-->
+        <item name="toolbarStyle">@style/Style_ToolBar</item> <!--Style du Toolbar défini plus bas-->
 
-        <item name="materialButtonStyle">@style/Widget.Material3.Button.Circular</item>
+        <item name="materialButtonStyle">@style/Widget.Material3.Button.Circular</item> <!--Style Material Btn défini plus bas-->
 
     </style>
 
-    <!--Définition de la taille des icones et leur background-->
+    <!--Définition de la taille des icones et taille de leur background-->
     <item name="icon" type="dimen" format="dimension">40dp</item>
     <item name="iconTaille" type="dimen" format="dimension">60dp</item>
 
-    <!--Style Bouton sans modification-->
+    <!--Style Bouton sans modification. (redéfinit le formatage de base)-->
     <style name="Widget.Material3.Button" parent="Widget.MaterialComponents.Button">
         <item name="cornerRadius">0dp</item>
         <item name="android:width">0dp</item>
@@ -24,13 +24,14 @@
         <item name="backgroundTint">@android:color/transparent</item>
     </style>
 
-    <!--Bouton rond et Vert-->
+    <!--Permet d'ajouter des bords arrondis aux Boutons-->
     <style name="ShapeAppearance.MaterialComponents.Circular" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
 
 
+    <!--Bouton arrondi, Vert Fonce avec icon Vert Eau. Pour les boutons icone-->
     <style name="Widget.Material3.Button.Circular" parent="Widget.MaterialComponents.Button">
         <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Circular</item>
         <item name="backgroundTint">@color/Vert_fonce</item>
@@ -39,14 +40,24 @@
         <item name="android:width">@dimen/iconTaille</item>
     </style>
 
+    <!--Bouton arrondi, Vert Foncé, sans condition de taille. Pour les boutons sur fond clair-->
     <style name="Widget.Material3.Button.Circular.2" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/Vert_fonce</item>
         <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Circular</item>
+    </style>
 
+    <!--Bouton arrondi, Blanc avec icon et txt en Vert fonce. Pour boutons sur fond foncé-->
+    <style name="Widget.Material3.Button.Circular.3" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Circular</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="iconTint">@color/Vert_fonce</item>
+        <item name="textFillColor">@color/Vert_fonce</item>
     </style>
 
 
-    <!-- Style ToolBar -->
+
+
+    <!-- Style ToolBar : Vert fonce, texte blanc -->
     <style name="Style_ToolBar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
         <item name="android:background">@color/Vert_fonce</item>
         <item name="titleTextColor">@color/white</item>
@@ -55,13 +66,14 @@
         <item name="android:theme">@style/ToolbarIconTheme</item>
     </style>
 
+    <!--Définition d'un nouveau thème pour personnaliser les icones du ToolBar-->
     <style name="ToolbarIconTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="iconTint">@color/white</item>
         <item name="iconGravity">textTop</item>
         <item name="android:layout_marginTop">2dp</item>
     </style>
 
-    <!-- Style Bottom Nav-->
+    <!-- Style Bottom Nav : Vert fonce, icones en blanc-->
     <style name="Style_BottomNavBar" parent="Widget.Design.BottomNavigationView">
         <item name="android:background">@color/Vert_fonce</item>
         <item name="itemIconTint">@color/white</item>
@@ -71,6 +83,7 @@
         <item name="labelVisibilityMode">unlabeled</item>
     </style>
 
+    <!--Style CardView : Vert eau et bords arrondis-->
     <style name="CardView." parent="CardView">
         <item name="cardBackgroundColor">@color/Vert_eau2</item>
         <item name="cardCornerRadius">15dp</item>
@@ -102,7 +115,13 @@
     <style name="Base.TextAppearance.MaterialComponents.Button." parent="Base.TextAppearance.MaterialComponents.Button">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">10dp</item>
-        <item name="android:text">@string/detail_txt</item>
+    </style>
+
+    <style name="Base.TextAppearance.MaterialComponents.Button.2" parent="Base.TextAppearance.MaterialComponents.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/Vert_fonce</item>
+        <item name="backgroundTint">@color/white</item>
     </style>
 
 </resources>

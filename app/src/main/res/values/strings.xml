@@ -1,18 +1,71 @@
 <resources>
     <string name="app_name">MeetFix</string>
+    <!--Texte Bouton Carte/Liste dans menu Home-->
     <string name="carte_btn">Carte</string>
+    <string name="liste_btn">Liste</string>
+
+    <!--Texte Boutons(Pour l'accessibilite -> visible en click long)-->
     <string name="rechercher_btn">Rechercher</string>
     <string name="notif_btn">Notifications</string>
     <string name="para_btn">Parametres</string>
-    <string name="view">view</string>
-    <string name="liste_btn">Liste</string>
     <string name="add_btn">Ajouter contact</string>
+    <string name="view">view</string>
 
-    <!--Données Exemple-->
+    <!--Texte par défaut des données des membres-->
     <string name="nom_txt">Chloé</string>
-    <string name="passion_txt">Bombarde, Cornemuse, Pokémon</string>
+    <string name="passion_txt">Je peux vous apprendre à diagnostiquer, réparer vos ordinateurs et consoles de jeu !</string>
     <string name="age_txt">24</string>
     <string name="location_txt">Vannes</string>
+
+    <!--Texte dans les boutons-->
     <string name="msg_txt">Envoyer un message.</string>
-    <string name="detail_txt">Détail de l\'activité</string>
+    <string name="detail_txt">Détails de l\'activité</string>
+    <string name="rejoindreAct_txt">Rejoindre l\'activité</string>
+    <string name="publierAct_txt">Publier</string>
+    <string name="annuler">Annuler</string>
+    <string name="retour">Retour</string>
+    <string name="modifier">Modifier</string>
+    <string name="supprimerCompte">Supprimer mon compte </string>
+    <string name="groupeBtn">Groupe</string>
+    <string name="priveBtn">Privé</string>
+    
+    <!--Texte des TextView dans menu détails/création de l'activité-->
+    <string name="nomActTxtView">Nom de l\'activité :</string>
+    <string name="createurTxtView">Créateur :</string>
+    <string name="participationTxtView">Participation :</string>
+    <string name="categorieTxtView">Catégorie :</string>
+    <string name="descriptionTxtView">Description :</string>
+    <string name="nombreMemInscritTxtView">Membres inscrits :</string>
+
+    <!--Texte des TextView dans menu profil-->
+    <string name="nomProfil">Nom :</string>
+    <string name="ageProfil">Age :</string>
+    <string name="txtRechercheProfil">Ce que je recherche ici :</string>
+    <string name="mesAct">Mes activités :</string> <!--Aussi dans menu listFav-->
+
+
+    <!--Texte des TextView dans menu Paramètres-->
+    <string name="changerTheme">Changer le thème :</string>
+
+    <!--Texte des Titres des menus-->
+    <string name="actProcheHome">Les activités autour de moi</string>
+    <string name="memProcheHome">Les membres à proximité</string>
+    <string name="actFav">Mes activités favorites</string>
+    <string name="Messagerie">Messagerie</string>
+    <string name="nomMsg">Nom de Act/Mem</string>
+    <string name="parametres">Paramètres</string>
+    <string name="monProfil">Mon Profil</string>
+
+
+
+    <!--Texte boutons catégorie d'activité -> menu ajouter une activité-->
+    <string name="mode">Mode</string>
+    <string name="electronique">Electronique</string>
+    <string name="vehicules">Véhicules</string>
+    <string name="ameublement">Ameublement</string>
+    <string name="electromenager">Electroménager</string>
+    <string name="cuisine">Cuisine</string>
+    <string name="jeuxjouets">Jeux/Jouets</string>
+
+
 </resources>

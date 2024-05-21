@@ -62,7 +62,7 @@ public class Controller {
                activity.moveToFragment(new HomeFragment());
                return true;
            case R.id.nav_notification:
-               activity.moveToFragment(new NotificationsFragment());
+               activity.moveToFragment(new DetailsActiviteFragment());
                return true;
 
        } return false;
