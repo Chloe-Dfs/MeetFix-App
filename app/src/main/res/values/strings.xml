@@ -10,6 +10,7 @@
     <string name="para_btn">Parametres</string>
     <string name="add_btn">Ajouter contact</string>
     <string name="view">view</string>
+    <string name="btn_fav">ajouter aux favoris</string>
 
     <!--Texte par défaut des données des membres-->
     <string name="nom_txt">Chloé</string>
@@ -30,12 +31,12 @@
     <string name="priveBtn">Privé</string>
     
     <!--Texte des TextView dans menu détails/création de l'activité-->
-    <string name="nomActTxtView">Nom de l\'activité :</string>
-    <string name="createurTxtView">Créateur :</string>
-    <string name="participationTxtView">Participation :</string>
-    <string name="categorieTxtView">Catégorie :</string>
+    <string name="nomActTxtViewAjoutAct">Nom de l\'activité :</string> <!--menu ajout activité-->
+    <string name="nomActTxtViewDetAct">Nom de l\'activité</string> <!--Titre menu Détails de l'activité-->
+    <string name="createurTxtView">Créateur : \nCatégorie : \nParticipation : \nMembres inscrits :</string>
     <string name="descriptionTxtView">Description :</string>
-    <string name="nombreMemInscritTxtView">Membres inscrits :</string>
+
+    <string name="donneesdetcre">@</string>
 
     <!--Texte des TextView dans menu profil-->
     <string name="nomProfil">Nom :</string>

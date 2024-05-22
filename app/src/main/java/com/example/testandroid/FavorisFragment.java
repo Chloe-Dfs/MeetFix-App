@@ -1,62 +1,64 @@
 package com.example.testandroid;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FavorisFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class FavorisFragment extends Fragment {
+/*
+    private AjouterController ajouterController;
+    private static JSONArray mesActivites;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private ArrayList<String> listActivite;
+    private ArrayAdapter<String> adapter;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public FavorisFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FavorisFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FavorisFragment newInstance(String param1, String param2) {
-        FavorisFragment fragment = new FavorisFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favoris, container, false);
+        View view =  inflater.inflate(R.layout.fragment_favoris, container, false);
+
+        ajouterController = new AjouterController(getContext());
+        ListView liste = view.findViewById(R.id.listeAct);
+        listActivite = new ArrayList<>();
+
+        adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, listActivite);
+        liste.setAdapter(adapter);
+
+        chargerActivites();
+
+        return view;
     }
+
+    private void chargerActivites() {
+        List<ModeleAjouter> activites = ajouterController.getMesActivites();
+        for (ModeleAjouter activite : activites) {
+            listActivite.add(activite.getNom() + " - " + activite.getDate());
+        }
+        adapter.notifyDataSetChanged();
+    }
+/*
+    //Ajouter activites au json
+    public void ajouterNewAct(String nom, String date, int capaciteMax, String description) {
+        JSONObject newEvent = new JSONObject();
+        try {
+            newEvent.put("créateur", nom);
+            newEvent.put("date", date);
+            newEvent.put("capaciteMax", capaciteMax);
+            newEvent.put("description", description);
+            mesActivites.put(newEvent);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+*/
 }

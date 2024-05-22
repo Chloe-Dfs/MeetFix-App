@@ -13,7 +13,6 @@ public class HomeController {
 
     public HomeController(HomeFragment homefragment) {
         this.homefragment = homefragment;
-
     }
 
     public void initBtnCarteListe(Button btnCarteListe) {

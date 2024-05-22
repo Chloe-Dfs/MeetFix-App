@@ -1,29 +1,27 @@
 package com.example.testandroid;
 
 
+import android.annotation.SuppressLint;
 import android.view.MenuItem;
-import android.view.View;
-
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.io.IOException;
-import java.io.InputStream;
-
 
 //classe controleur
 public class Controller {
 
-    private MainActivity activity;
+    private final MainActivity activity;
     public Controller(MainActivity activity){
+
         this.activity = activity;
     }
 
+    //Ecran Home à l'ouverture de l'app
     public void openAppView() {
         activity.moveToFragment(new HomeFragment());
     }
 
     //Méthode pour changer le fragment en fonction du bouton choisi sur la barre de navigation en bas
+    @SuppressLint("NonConstantResourceId")
     public void changeViewBottomNav(){
         BottomNavigationView bottomNavigationView = activity.findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnItemSelectedListener( item -> {
@@ -50,6 +48,7 @@ public class Controller {
         });
     }
 
+    @SuppressLint("NonConstantResourceId")
     public boolean changeViewBtnToolbar(MenuItem item){
        switch (item.getItemId()){
            case R.id.nav_rechercher:

@@ -1,7 +1,6 @@
 package com.example.testandroid;
 
 
-import android.content.res.AssetManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
@@ -9,23 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-
-import static java.security.AccessController.getContext;
-
 
 //classe Vue
 public class MainActivity extends AppCompatActivity {
         private Controller controller;
-        private Modele modele;
         private static JSONArray utilisateurs;
         private static JSONArray evenements;
 
@@ -52,13 +43,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //2 Méthodes pour la gestion du ToolBar
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.top_home_menu, menu);
-        return true;
-    }
-
+    //Json
     public static JSONArray getUtilisateurs(){
         return utilisateurs;
     }
@@ -67,28 +52,8 @@ public class MainActivity extends AppCompatActivity {
         return evenements;
     }
 
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu){
-        menu.clear();
-        int menuId = controller.getMenuIdCurrentFragment();
-        getMenuInflater().inflate(menuId, menu);
-        return super.onPrepareOptionsMenu(menu);
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return controller.changeViewBtnToolbar(item) || super.onOptionsItemSelected(item);
-    }
-
-    //Méthode pour changer d'écran (de Fragment)
-    public void moveToFragment(Fragment fragment) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.container_view,fragment).commit();
-        supportInvalidateOptionsMenu();
-    }
-
     public String loadJSONFromAsset(String fileName) throws IOException {
-        String json = null;
+        String json;
         try {
             InputStream is = getAssets().open(fileName);
             int size = is.available();
@@ -101,5 +66,32 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
         return json;
+    }
+
+    //2 Méthodes pour la gestion du ToolBar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.top_home_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu){
+        menu.clear();
+        int menuId = controller.getMenuIdCurrentFragment();
+        getMenuInflater().inflate(menuId, menu);
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return controller.changeViewBtnToolbar(item) || super.onOptionsItemSelected(item);
+    }
+
+
+    //Méthode pour changer d'écran (de Fragment)
+    public void moveToFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_view,fragment).commit();
+        supportInvalidateOptionsMenu();
     }
 }

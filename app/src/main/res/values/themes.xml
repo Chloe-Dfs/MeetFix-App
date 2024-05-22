@@ -10,6 +10,7 @@
 
         <item name="materialButtonStyle">@style/Widget.Material3.Button.Circular</item> <!--Style Material Btn défini plus bas-->
 
+
     </style>
 
     <!--Définition de la taille des icones et taille de leur background-->
@@ -89,20 +90,79 @@
         <item name="cardCornerRadius">15dp</item>
     </style>
 
+    <style name="CardView.Background" parent="CardView.">
+        <item name="cardBackgroundColor">@color/Vert_fonce</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="android:animateLayoutChanges">true</item>
+    </style>
+
     <!--Petit TextView-->
     <style name="Widget.AppCompat.TextView." parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/Vert_flash</item>
         <item name="android:textSize">16dp</item>
     </style>
 
-    <!--Grand TextView-->
+    <!--Moyen TextView blanc-->
     <style name="Widget.AppCompat.TextView.2" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">24dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <!-- Titre Menu TextView-->
+    <!--Gros titre Menu TextView Blanc-->
+    <style name="Widget.AppCompat.TextView.4" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">36dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+
+    </style>
+
+    <!--Moyen TextView blanc-->
+    <style name="Widget.AppCompat.TextView.5" parent="Widget.AppCompat.TextView">
+
+        <item name="android:textAppearance">@style/Widget.AppCompat.TextView.2</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.ShapeableImageView.1" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="android:src">@drawable/outils</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <!--
+    android:src=""
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:scaleType="centerInside"
+    android:cropToPadding="true"
+    app:layout_constraintDimensionRatio="H,1:1"
+    app:layout_constraintVertical_chainStyle="packed"
+    android:id="@+id/detailLogoAct"
+    android:adjustViewBounds="true"
+    android:background="@drawable/round"
+    android:backgroundTint="@color/Vert_eau"-->
+
+    <!--TextView DétAct et AjouAct-->
+
+
+    <!-- Titre Menu TextView Marron-->
     <style name="Widget.AppCompat.TextView.3" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/Marron_sombre</item>
         <item name="android:textSize">24dp</item>
@@ -118,8 +178,8 @@
     </style>
 
     <style name="Base.TextAppearance.MaterialComponents.Button.2" parent="Base.TextAppearance.MaterialComponents.Button">
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">10dp</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.MaterialComponents.Button.</item>
+        <item name="iconTint">@color/Vert_fonce</item>
         <item name="android:textColor">@color/Vert_fonce</item>
         <item name="backgroundTint">@color/white</item>
     </style>

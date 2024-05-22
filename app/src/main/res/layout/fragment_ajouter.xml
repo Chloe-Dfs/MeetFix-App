@@ -18,24 +18,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="top">
-                <!--Id-->
-                <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="ID Activité"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/IDLabel" android:layout_weight="1"/>
-                    <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text="ID"
-                            android:ems="10"
-                            android:id="@+id/IDText" android:layout_weight="1"/>
-                </LinearLayout>
+
                 <!--Name-->
                 <LinearLayout
                         android:orientation="horizontal"
@@ -54,25 +37,7 @@
                             android:ems="10"
                             android:id="@+id/NameText" android:layout_weight="1"/>
                 </LinearLayout>
-                <!--localisation-->
-                <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="Adresse"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/PlaceLabel"
-                            android:layout_weight="1"/>
-                    <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text="Name"
-                            android:ems="10"
-                            android:id="@+id/PlaceText" android:layout_weight="1"/>
-                </LinearLayout>
+
                 <!--date-->
                 <LinearLayout
                         android:orientation="horizontal"
@@ -90,59 +55,7 @@
                             android:ems="10"
                             android:id="@+id/DateText" android:layout_weight="1"/>
                 </LinearLayout>
-                <!--Heure-->
-                <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="Heure de début"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/HourLabel" android:layout_weight="1"/>
-                    <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:inputType="time"
-                            android:ems="10"
-                            android:id="@+id/Hourtext" android:layout_weight="1"/>
-                </LinearLayout>
-                <!--Duration-->
-                <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="Durée"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/DurationLabel"
-                            android:layout_weight="1"/>
-                    <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:inputType="time"
-                            android:ems="10"
-                            android:id="@+id/DurationText" android:layout_weight="1"/>
-                </LinearLayout>
-                <!--Organizer ID-->
-                <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="ID Organisateur"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/OrgaLabel" android:layout_weight="1"/>
-                    <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text="Name"
-                            android:ems="10"
-                            android:id="@+id/OrgaText" android:layout_weight="1"/>
-                </LinearLayout>
+
                 <!--Nb de Personnes max / Capacity-->
                 <LinearLayout
                         android:orientation="horizontal"
@@ -152,7 +65,8 @@
                     <TextView
                             android:text="Capacité max."
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/CapacityLabel"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/CapacityLabel"
                             android:layout_weight="1"/>
                     <EditText
                             android:layout_width="wrap_content"
@@ -170,7 +84,8 @@
                     <TextView
                             android:text="Description"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/DescLabel" android:layout_weight="1"/>
+                            android:layout_height="wrap_content"
+                            android:id="@+id/DescLabel" android:layout_weight="1"/>
                     <EditText
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -179,44 +94,7 @@
                             android:ems="10"
                             android:id="@+id/DescText" android:layout_weight="1"/>
                 </LinearLayout>
-                <!--Obligations-->
-                <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="Exigences (?)"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/ObligLabel"
-                            android:layout_weight="1"/>
-                    <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text="Name"
-                            android:ems="10"
-                            android:id="@+id/ObligText" android:layout_weight="1"/>
-                </LinearLayout>
-                <!--To Bring / YALHAV-->
-                <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-                    <TextView
-                            android:text="À apporter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/BringLabel"
-                            android:layout_weight="1"/>
-                    <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text="Name"
-                            android:ems="10"
-                            android:id="@+id/BringText" android:layout_weight="1"/>
-                </LinearLayout>
+
                 <!--Validation Button-->
                 <Button
                         android:text="Créer une Activité !"

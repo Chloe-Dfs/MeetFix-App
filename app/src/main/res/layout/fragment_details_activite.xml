@@ -6,38 +6,20 @@
              android:layout_height="match_parent"
              tools:context=".DetailsActiviteFragment">
     <androidx.cardview.widget.CardView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            style="@style/CardView."
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            app:cardElevation="0dp"
-            android:animateLayoutChanges="true"
-            app:cardBackgroundColor="@color/Vert_fonce">
+            style="@style/CardView.Background">
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
             <TextView
-                    android:text="@string/nomActTxtView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.AppCompat.TextView.2"
+                    android:text="@string/nomActTxtViewDetAct"
+                    style="@style/Widget.AppCompat.TextView.4"
                     android:id="@+id/detailAcTtitre"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/detailLogoAct"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:gravity="center"/>
+                    app:layout_constraintEnd_toEndOf="parent"/>
             <ImageView
+
                     android:src="@drawable/outils"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
@@ -47,65 +29,41 @@
                     app:layout_constraintVertical_chainStyle="packed"
                     android:id="@+id/detailLogoAct"
                     android:adjustViewBounds="true"
-                    app:layout_constraintStart_toStartOf="@id/detailAcTtitre"
+                    android:background="@drawable/round"
+                    android:backgroundTint="@color/Vert_eau"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/detailAcTtitre"
-                    app:layout_constraintBottom_toTopOf="@id/createurTxtDetailAct"/>
+                    app:layout_constraintBottom_toTopOf="@id/createurTxtDetailAct"
+                    android:contentDescription="@string/detail_txt"/>
             <TextView
                     android:text="@string/createurTxtView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.AppCompat.TextView.2"
+                    style="@style/Widget.AppCompat.TextView.5"
                     android:id="@+id/createurTxtDetailAct"
-                    app:layout_constraintStart_toStartOf="@id/detailAcTtitre"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/detailLogoAct"
-                    app:layout_constraintBottom_toTopOf="@id/participationDetailAct"/>
-            <TextView
-                    android:text="@string/participationTxtView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.AppCompat.TextView.2"
-                    android:id="@+id/participationDetailAct"
-                    app:layout_constraintStart_toStartOf="@id/detailAcTtitre"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/createurTxtDetailAct"
-                    app:layout_constraintBottom_toTopOf="@id/memInscDetailAct"/>
-            <TextView
-                    android:text="@string/nombreMemInscritTxtView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.AppCompat.TextView.2"
-                    android:id="@+id/memInscDetailAct"
-                    app:layout_constraintStart_toStartOf="@id/detailAcTtitre"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/participationDetailAct"
-                    app:layout_constraintBottom_toTopOf="@id/DescriptionDetailAct"/>
+                    app:layout_constraintBottom_toTopOf="@id/DescriptionDetailAct"
+                    tools:ignore="MissingConstraints"/>
             <TextView
                     android:text="@string/descriptionTxtView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.AppCompat.TextView.2"
+                    style="@style/Widget.AppCompat.TextView.5"
                     android:id="@+id/DescriptionDetailAct"
-                    app:layout_constraintStart_toStartOf="@id/detailAcTtitre"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/memInscDetailAct"
-                    app:layout_constraintBottom_toTopOf="@id/participeBtnDetailAct"/>
-
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/createurTxtDetailAct"
+                    app:layout_constraintBottom_toTopOf="@id/participeBtnDetailAct"
+                    tools:ignore="MissingConstraints"/>
             <com.google.android.material.button.MaterialButton
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/rejoindreAct_txt"
                     android:id="@+id/participeBtnDetailAct"
 
-                    app:layout_constraintStart_toStartOf="@id/detailAcTtitre"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/favBtnDetailAct"
-                    app:layout_constraintRight_toLeftOf="@id/favBtnDetailAct"
                     app:layout_constraintTop_toBottomOf="@id/DescriptionDetailAct"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    style="@style/Base.TextAppearance.MaterialComponents.Button."
-                    android:textColor="@color/white"
+                    style="@style/Base.TextAppearance.MaterialComponents.Button.2"
                     android:layout_margin="20dp"
                     app:icon="@drawable/bulle"
                     app:iconGravity="textEnd"
@@ -122,12 +80,17 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/DescriptionDetailAct"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    style="@style/Widget.Material3.Button.Circular.3"
                     android:layout_margin="20dp"
                     app:icon="@drawable/favoris"
                     app:iconGravity="textEnd"
                     app:iconPadding="0sp"
-                    app:iconSize="@dimen/icon">
+                    app:iconSize="@dimen/icon" android:contentDescription="@string/btn_fav">
             </com.google.android.material.button.MaterialButton>
+            <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content" android:id="@+id/guideline"
+                                                        app:layout_constraintGuide_begin="20dp"
+                                                        android:orientation="vertical"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
