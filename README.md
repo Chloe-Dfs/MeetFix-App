@@ -7,4 +7,5 @@ Il s'agit d'une application prototype permettant aux utilisateurs de se retrouve
 Par exemple, apprendre à réparer des voitures auprès d'un utilisateur qui souhaite l'enseigner.
 
 # Installation et exécution
-*À compléter lorsque le projet sera plus avancé*
+Ouvrez le projet depuis le racine du git (ou du zip) avec un éditeur de code tel que Intellij, laissez le charger le projet et tous les fichiers de configuration.
+Puis, une fois que c'est chargé et qu'il détecte votre téléphone, appuyez sur la bouton `run`.
